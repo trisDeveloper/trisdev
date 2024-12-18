@@ -1,0 +1,27 @@
+header {
+  .hero {
+    font-size: clamp(32px, 8.5vw, 98px);
+    letter-spacing: -1px;
+    margin-top: calc(50vh - 1.4em);
+    line-height: 1;
+    z-index: 1;
+    .hero-words {
+      opacity: 0;
+      display: inline-block;
+    }
+  }
+  .HeroRainbow {
+    color: #fff;
+    background-image: linear-gradient(
+      to right,
+      #bcffbc,
+      #ace8ff,
+      #d4b3ff,
+      #ffbedf,
+      #fff5bf,
+      #ffe9bf
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}

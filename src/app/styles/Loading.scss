@@ -1,0 +1,32 @@
+.loading {
+  span {
+    color: #feffdf;
+    text-shadow: 0 0 5px #feffdf;
+    animation: spanGlow 3s ease forwards;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  .loadingWings {
+    filter: drop-shadow(0px 0px 3px #ffffffe7);
+    transform: translateZ(0);
+    will-change: transform, filter;
+    width: 100px;
+    height: auto;
+    transform: translateX(15px);
+    transform-origin: right;
+    animation: LeftWing 3s cubic-bezier(0.18, 0.89, 0.5, 1) forwards;
+    &:nth-of-type(2) {
+      transform: translateX(-15px);
+      transform-origin: left;
+      animation: RightWing 3s cubic-bezier(0.18, 0.89, 0.5, 1) forwards;
+    }
+  }
+  .yellowGlow {
+    height: 1px;
+    width: 1px;
+    background-color: #feffdf;
+    box-shadow: 0 0 1px 1px #feffdf;
+    transform: translate(-50%, -50%);
+    animation: BgGlow 3s cubic-bezier(0.55, 0.09, 0.68, 0.53) forwards;
+  }
+}

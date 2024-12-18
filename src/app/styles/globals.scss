@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 30;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #00030c 0%,
+    #04081c 15%,
+    #050e27 40%,
+    #141f42 65%,
+    #192956 70%,
+    #5075b9 85%,
+    #e9beaa 100%
+  );
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 20;
+  padding: 0 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shootingStar {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 1px;
+  z-index: -1;
+  height: 1px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 0 2px 1px #fff;
+  will-change: transform, opacity;
+  animation: ShootStar 20s linear infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    transform: translateX(-100%);
+    width: 250px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: ShrinkStar 20s linear infinite;
+  }
+}
