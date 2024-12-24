@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SocialMedia from '@/app/components/shared/SocialMedia';
+import { CursorSparkle } from '@/app/lib/cursorAnimation';
 
 const Hero: React.FC = () => {
   useGSAP(() => {
@@ -34,7 +35,12 @@ const Hero: React.FC = () => {
       },
     });
   });
-
+  React.useEffect(() => {
+    const Header = document.querySelector('header') as HTMLElement;
+    if (Header) {
+      CursorSparkle(Header);
+    }
+  }, []);
   return (
     <div className='min-h-screen w-full'>
       <header className='absolute z-10 top-0 left-0 w-full h-full'>

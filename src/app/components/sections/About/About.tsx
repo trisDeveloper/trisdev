@@ -2,7 +2,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
-//import Skills from './Skills';
+import Skills from './Skills';
 import { useGSAP } from '@gsap/react';
 import Clouds from './Clouds';
 import { AboutList } from '@/app/lib/pageContent';
@@ -23,8 +23,8 @@ const About: React.FC = () => {
       .timeline({
         scrollTrigger: {
           trigger: '.about',
-          start: `center+=${window.innerHeight / 1.5} center`,
-          end: `center+=${1.5 * window.innerHeight} center`,
+          start: `center+=${window.innerHeight - 300} center`,
+          end: `center+=${window.innerHeight} center`,
           scrub: true,
         },
       })
@@ -36,8 +36,8 @@ const About: React.FC = () => {
       .timeline({
         scrollTrigger: {
           trigger: '.about',
-          start: `center+=${window.innerHeight * 1.5} center`,
-          end: `center+=${3 * window.innerHeight} center`,
+          start: `center+=${2 * window.innerHeight - 300} center`,
+          end: `center+=${2 * window.innerHeight} center`,
           scrub: true,
         },
       })
@@ -78,9 +78,9 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
+        <Skills />
       </div>
       <Clouds />
-      {/* <Skills /> */}
     </div>
   );
 };

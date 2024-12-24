@@ -6,18 +6,13 @@ import About from './components/sections/About/About';
 import Projects from './components/sections/Projects/Projects';
 import Moon from './components/Moon';
 import { playStars } from './lib/backgroundSky';
-//import { CursorSparkle } from './lib/cursorAnimation';
 
 const Home: React.FC = () => {
   React.useEffect(() => {
-    //const Header = document.querySelector('header') as HTMLElement;
     const canvas = document.getElementById('skyStars') as HTMLCanvasElement;
     if (canvas) {
       playStars(canvas);
     }
-    // if (Header) {
-    //   CursorSparkle(Header);
-    // }
   }, []);
   return (
     <main className='min-h-screen overflow-x-hidden'>
