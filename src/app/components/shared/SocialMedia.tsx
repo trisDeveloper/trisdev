@@ -44,10 +44,12 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ colors }) => {
             className='cursor-pointer'>
             <link.icon
               size={20}
-              style={{
-                color: colors[index],
-                '--shadow-color': colors[index] + 80,
-              }}
+              style={
+                {
+                  color: colors[index],
+                  '--shadow-color': colors[index] + 80,
+                } as any
+              }
               className='transition-all hover:drop-shadow-[0_0_3px_var(--shadow-color)]'
             />
           </a>
