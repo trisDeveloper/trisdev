@@ -29,9 +29,9 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
     }
   }, [pathname]);
 
-  // Simulate loading state (replace with actual loading logic if applicable)
+  // loading state
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1000);
+    const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
