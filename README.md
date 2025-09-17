@@ -3,6 +3,10 @@
 Personal website built to showcase projects and skills.  
 Interactive, animated, and performance-focused design built with modern web technologies.
 
+## Live Demo
+
+🔗 [View the app on Vercel](https://trisdev.vercel.app)
+
 ## Tech Stack
 
 - **Framework:** React + Vite
